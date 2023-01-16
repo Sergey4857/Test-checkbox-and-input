@@ -683,10 +683,22 @@ padding-left: 24px;
 padding-right: 24px;
 }
 .data-container{
+   position: relative;
 display: flex;
 flex-direction: column;
 }
+
+.data-box {
+
+   display: flex;
+   flex-direction: column;
+
+}
+
+
+
 .data-title{
+
 font-size: 12px;
 line-height: 1.33;
 letter-spacing: 0.04em;
@@ -694,23 +706,88 @@ color: #8E8F99;
 margin-bottom: 4px;
 margin-top: 8px;
 }
+
+
+
 .data-name{
 margin-top: 0px;
+position: absolute;
+top: 12px;
+left: 15px;
 }
+
+.data-phone{
+position: absolute;
+   top: 75px;
+   left: 15px;
+
+}
+
+
+
+.data-mail{
+position: absolute;
+   top: 144px;
+   left: 15px;
+
+
+}
+
+
+
+
+
+
+
 .data-field{
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 40px;
 padding-left: 38px;
+margin-bottom: 30px;
 }
+
+
+
+
+
+
 .data-field:focus{
 outline: 0;
 border-color: var(--hover-focus-color);
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.data-box:focus-within > .data-title{
+
+color: #4D5AE5;
+transform: translateY(-29px);
+} 
+
+.data-box:focus-within .icon-person {
+
+transform: translateY( -29px );
 
 }
 
 
+
+
+
+
+
+/* 
+.data-title:focus-within ~ .icon-person {
+
+   transform: translateY(-30px);
+
+}
+
+.data-title:not(:placeholder-shown) ~ .icon-person{
+
+transform: translateY( -30px);
+} */
 
 
 .data-comment{
@@ -735,21 +812,17 @@ border-color: #4D5AE5;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.data-box{
 
-position: relative;
-display: flex;
-flex-direction: column;
-}
 
 
 .icon-person{
 position: absolute;
-   left: 16px;
-   top: 31px;
+   left: 57px;
+   top: 11px;
 
 width: 18px;
 height: 18px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .data-field:focus + .icon-person,
 .data-field:focus + .icon-phone,
@@ -763,8 +836,8 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .icon-phone{
 position: absolute;
-left: 16px;
-top: 37px;
+left: 57px;
+top: 79px;
 width: 18px;
 height: 24px;
 }
@@ -772,8 +845,8 @@ height: 24px;
 
 .icon-mail{
 position: absolute;
-left: 16px;
-top: 35px;
+left: 57px;
+top: 149px;
 width: 18px;
 height: 24px;
 }
