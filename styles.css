@@ -705,6 +705,7 @@ letter-spacing: 0.04em;
 color: #8E8F99;
 margin-bottom: 4px;
 margin-top: 8px;
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -745,6 +746,7 @@ border-radius: 4px;
 height: 40px;
 padding-left: 38px;
 margin-bottom: 30px;
+
 }
 
 
@@ -764,37 +766,55 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 color: #4D5AE5;
 transform: translateY(-29px);
 } 
+.data-box:focus-within .icon-phone {
 
-.data-box:focus-within .icon-person {
+   color: #4D5AE5;
+   transform: translateY(-29px);
+}
+.data-box:focus-within .icon-mail {
+
+   color: #4D5AE5;
+   transform: translateY(-29px);
+}
+
+
+
+.data-field:focus + .icon-person,
+.data-field:not(:placeholder-shown) + .icon-person {
 
 transform: translateY( -29px );
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+}
+
+.data-field:focus ~ .data-title,
+.data-field:not(:placeholder-shown) ~ .data-title {
+
+   transform: translateY(-29px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-box:focus-within .icon-phone,
+.data-field:not(:placeholder-shown) ~ .icon-phone{
+transform: translateY(-29px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-box:focus-within .icon-mail,
+.data-field:not(:placeholder-shown)~.icon-mail {
+   transform: translateY(-29px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 
-
-
-
-
-/* 
-.data-title:focus-within ~ .icon-person {
-
-   transform: translateY(-30px);
-
-}
-
-.data-title:not(:placeholder-shown) ~ .icon-person{
-
-transform: translateY( -30px);
-} */
 
 
 .data-comment{
    resize: none;
    width: 360px;
    height: 120px;
-   border: 1px solid rgba(33, 33, 33, 0.2);
+   border: 1px solid rgba(78, 54, 54, 0.2);
    border-radius: 4px;
    margin-bottom: 16px;
    padding-top: 8px;
@@ -822,7 +842,8 @@ position: absolute;
 
 width: 18px;
 height: 18px;
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .data-field:focus + .icon-person,
 .data-field:focus + .icon-phone,
@@ -830,6 +851,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 {
 fill: var(--hover-focus-color);
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -840,6 +862,7 @@ left: 57px;
 top: 79px;
 width: 18px;
 height: 24px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -849,6 +872,7 @@ left: 57px;
 top: 149px;
 width: 18px;
 height: 24px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .privacy-policy{
